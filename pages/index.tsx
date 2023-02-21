@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
@@ -29,7 +30,10 @@ function EcommerceProject() {
           <span className="font_sm">3</span>
         </button>
       </div>
-      <EccomerceNavbar></EccomerceNavbar>
+      <div id="content_wrapper">
+        <EccomerceNavbar></EccomerceNavbar>
+        <EccomerceMenu></EccomerceMenu>
+      </div>
     </div>
   );
 }
@@ -55,17 +59,33 @@ function EccomerceNavbar() {
     "Meat & Seafood",
   ];
 
+  const [tab, setTab] = useState(0);
+
+  const btnHandle = (i: any) => {
+    setTab(i);
+    console.log(i);
+  };
+
   return (
     <nav id="eCommerceNavbar">
       <ul className="navbar_list">
         {nav_list.map((v, i) => {
           return (
             <li key={i}>
-              <button className="btn_tab">{v}</button>
+              <button
+                onClick={() => btnHandle(i)}
+                className={`btn_tab ${tab === i ? "btn_active" : ""}`}
+              >
+                {v}
+              </button>
             </li>
           );
         })}
       </ul>
     </nav>
   );
+}
+
+function EccomerceMenu() {
+  return <menu id="EccomerceMenu"></menu>;
 }
