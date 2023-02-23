@@ -19,14 +19,15 @@ body {
 
 #eCommerceProject {
   width: 1440px;
-  height: 1024px;
   border: 1px solid black;
   margin-top: 3rem;
   margin-bottom: 3rem;
   border-radius: 20px;
-  #content_wrapper{
+
+  #content_wrapper {
     display: flex;
   }
+
   #header {
     height: 102px;
     background: #FFE475;
@@ -37,6 +38,7 @@ body {
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
+
     .header_title {
       font-size: 30px;
       color: #100E3A;
@@ -56,17 +58,22 @@ body {
       box-shadow: 0px, 3px rgba(0, 0, 0, 0.16);
     }
   }
-  #eCommerceNavbar{
-    .navbar_list{
+
+  #eCommerceNavbar {
+    .navbar_list {
       list-style: none;
       margin: 20px;
       padding: 0;
       width: 246px;
-      li{
+      box-shadow: 1px 0px 1px rgba(51, 51, 51, 0.2);
+
+      li {
         height: 42px;
         display: flex;
         align-items: center;
-        .btn_tab{
+        padding: 10px 20px;
+
+        .btn_tab {
           height: inherit;
           width: 100%;
           background: transparent;
@@ -75,7 +82,8 @@ body {
           font-size: 16px;
           border-radius: 10px;
           cursor: pointer;
-          &.btn_active{
+
+          &.btn_active {
             background: #5DA9E9;
             color: #fff;
           }
@@ -83,14 +91,76 @@ body {
       }
     }
   }
-  #EccomerceMenu{
-    border: solid;
+
+  #EccomerceMenu {
     flex-grow: 1;
     min-height: 700px;
+
+    .ProductList {
+      padding: 10px 38px;
+
+      .product_title {
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        margin: 0;
+
+        img {
+          vertical-align: middle;
+        }
+      }
+
+      .ProductCard {
+        max-width: 140px;
+        padding: 10px;
+
+        .product_card_header {
+          position: relative;
+
+          .product_card_btn {
+            background: transparent;
+            border: none;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+          }
+        }
+
+        .product_card_body {
+          &>strong {
+            display: block;
+            margin-bottom: 10px;
+
+            &.product_price {
+              display: flex;
+              font-size: 20px;
+              color: #100E3A;
+            }
+
+            &.product_name {
+              font-size: 16px;
+              color: #100E3A;
+            }
+
+            &.product_weight {
+              font-size: 16px;
+              color: #B6BAC3;
+            }
+          }
+        }
+      }
+
+      .ProductSlider {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto;
+        grid-gap: 20px;
+      }
+    }
   }
 
   // classes
-  .font_sm{
+  .font_sm {
     font-size: 12px;
   }
 

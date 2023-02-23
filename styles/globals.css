@@ -18,7 +18,6 @@ body {
 
 #eCommerceProject {
   width: 1440px;
-  height: 1024px;
   border: 1px solid black;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -60,11 +59,13 @@ body {
   margin: 20px;
   padding: 0;
   width: 246px;
+  box-shadow: 1px 0px 1px rgba(51, 51, 51, 0.2);
 }
 #eCommerceProject #eCommerceNavbar .navbar_list li {
   height: 42px;
   display: flex;
   align-items: center;
+  padding: 10px 20px;
 }
 #eCommerceProject #eCommerceNavbar .navbar_list li .btn_tab {
   height: inherit;
@@ -81,9 +82,57 @@ body {
   color: #fff;
 }
 #eCommerceProject #EccomerceMenu {
-  border: solid;
   flex-grow: 1;
   min-height: 700px;
+}
+#eCommerceProject #EccomerceMenu .ProductList {
+  padding: 10px 38px;
+}
+#eCommerceProject #EccomerceMenu .ProductList .product_title {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+#eCommerceProject #EccomerceMenu .ProductList .product_title img {
+  vertical-align: middle;
+}
+#eCommerceProject #EccomerceMenu .ProductList .ProductCard {
+  max-width: 140px;
+  padding: 10px;
+}
+#eCommerceProject #EccomerceMenu .ProductList .ProductCard .product_card_header {
+  position: relative;
+}
+#eCommerceProject #EccomerceMenu .ProductList .ProductCard .product_card_header .product_card_btn {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+#eCommerceProject #EccomerceMenu .ProductList .ProductCard .product_card_body > strong {
+  display: block;
+  margin-bottom: 10px;
+}
+#eCommerceProject #EccomerceMenu .ProductList .ProductCard .product_card_body > strong.product_price {
+  display: flex;
+  font-size: 20px;
+  color: #100E3A;
+}
+#eCommerceProject #EccomerceMenu .ProductList .ProductCard .product_card_body > strong.product_name {
+  font-size: 16px;
+  color: #100E3A;
+}
+#eCommerceProject #EccomerceMenu .ProductList .ProductCard .product_card_body > strong.product_weight {
+  font-size: 16px;
+  color: #B6BAC3;
+}
+#eCommerceProject #EccomerceMenu .ProductList .ProductSlider {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-gap: 20px;
 }
 #eCommerceProject .font_sm {
   font-size: 12px;
