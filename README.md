@@ -15,3 +15,5 @@
     <code>npm install</code>
     <code>npm run dev</code>
 </h3>
+
+<img src="/public/assets/e-commerce-figma-to-nextjs.vercel.app_.png">
